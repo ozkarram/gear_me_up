@@ -1,5 +1,6 @@
 package com.crashdev.gearmeup;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,8 +10,13 @@ import android.widget.Spinner;
 
 import java.lang.reflect.Array;
 
+import adapter.ViewPagerAdapter;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    private int imageArra[] = { R.drawable.control1, R.drawable.control2, R.drawable.ctrl1,
+            R.drawable.ctrl4, R.drawable.ctrl3};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,9 @@ public class MainActivity extends ActionBarActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         //init viewpager
-        
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, imageArra);
+        ViewPager myPager = (ViewPager) findViewById(R.id.pager);
+        myPager.setAdapter(viewPagerAdapter);
+        myPager.setCurrentItem(0);
     }
 }
