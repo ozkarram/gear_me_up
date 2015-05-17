@@ -19,5 +19,7 @@
     <string name="form_desc_service">"Un servicio implica el uso de un bien que tu tienes para uso de otra persona. Puede ser impresión de documentos o renta de tu lavadora."</string>
     <string name="form_desc_product">"Un producto implica el traspaso del bien por un determinado tiempo y con ciertas condiciones. Si lo deseas, puedes establecer ciertos seguros para usar este tipo de renta."</string>
     <string name="form_city_offer">Ciudad</string>
+    <string name="form_assurance_text">¿Requieres algún seguro por el préstamo de tu producto?</string>
+    <string name="form_email_text">Correo electrónico</string>
 
 </resources>
