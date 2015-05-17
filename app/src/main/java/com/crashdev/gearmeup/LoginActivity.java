@@ -33,6 +33,7 @@ public class LoginActivity extends FragmentActivity {
         viewPagerIndicator.setViewPager(viewPager);
         viewPagerIndicator.setSnap(true);
         viewPagerIndicator.setRadius(20.0f);
+        viewPagerIndicator.setStrokeWidth(5.0f);
 
     }
 
