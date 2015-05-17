@@ -1,5 +1,7 @@
 package com.crashdev.gearmeup;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -8,9 +10,11 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-import com.viewpagerindicator.CirclePageIndicator;
-import com.viewpagerindicator.TitlePageIndicator;
+/*import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator;*/
 
 
 public class LoginActivity extends FragmentActivity {
@@ -26,14 +30,26 @@ public class LoginActivity extends FragmentActivity {
 
         viewPager = (ViewPager) findViewById(R.id.loginViewPager);
         viewPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
-        CirclePageIndicator viewPagerIndicator = (CirclePageIndicator)findViewById(R.id.viewPagerIndicator);
+        //CirclePageIndicator viewPagerIndicator = (CirclePageIndicator)findViewById(R.id.viewPagerIndicator);
         viewPager.setAdapter(viewPagerAdapter);
 
+        Button button1 = ((Button) findViewById(R.id.button));
+        Button button2 = ((Button) findViewById(R.id.button2));
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), FormNewOfferActivity.class);
+                startActivity(intent);
+            }
+        };
+        button1.setOnClickListener(listener);
+        button2.setOnClickListener(listener);
+
         //view pager indicator configuration
-        viewPagerIndicator.setViewPager(viewPager);
+        /*viewPagerIndicator.setViewPager(viewPager);
         viewPagerIndicator.setSnap(true);
         viewPagerIndicator.setRadius(20.0f);
-        viewPagerIndicator.setStrokeWidth(5.0f);
+        viewPagerIndicator.setStrokeWidth(5.0f);*/
 
     }
 

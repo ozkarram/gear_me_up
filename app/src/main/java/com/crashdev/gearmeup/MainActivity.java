@@ -56,5 +56,7 @@ public class MainActivity extends ActionBarActivity {
                 findViewById(R.id.layout_rent_now).setVisibility(View.VISIBLE);
             }
         });
+
+        
     }
 }

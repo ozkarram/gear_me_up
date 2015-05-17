@@ -10,12 +10,12 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/linearLayout" />
 
-    <com.viewpagerindicator.CirclePageIndicator
+    <!--<com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/viewPagerIndicator"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_marginBottom="20dp"
-        android:layout_above="@+id/linearLayout" />
+        android:layout_above="@+id/linearLayout" />-->
 
     <LinearLayout
         android:orientation="horizontal"

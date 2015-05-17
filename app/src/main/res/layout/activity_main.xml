@@ -42,13 +42,6 @@
                     android:layout_weight="1"
                     android:text="@string/offer_description"/>
 
-                <TextView
-                    android:id="@+id/type_offer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:text="Type"/>
             </LinearLayout>
 
             <LinearLayout
@@ -116,16 +109,22 @@
                 </LinearLayout>
             </LinearLayout>
 
+
+
+
+
             <Button
                 android:id="@+id/button_rent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Réntalo ahora"/>
 
+
             <LinearLayout
                 android:id="@+id/layout_rent_now"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:visibility="gone"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -178,7 +177,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Text"/>
+                    android:text="Ninguno"/>
             </LinearLayout>
 
 
