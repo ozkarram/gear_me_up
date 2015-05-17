@@ -12,6 +12,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_form_new_offer">FormNewOfferActivity</string>
+    <string name="title_activity_form_new_offer">Publica Nueva Oferta</string>
+    <string name="form_title_offer">Titulo de la oferta</string>
+    <string name="form_desc_offers">Describe tu oferta, que es lo que ofreces y con lo que quieres capturar para poder rentarlo</string>
+    <string name="form_new_offer">Nueva Oferta</string>
+    <string name="form_desc_service">"Un servicio implica el uso de un bien que tu tienes para uso de otra persona. Puede ser impresión de documentos o renta de tu lavadora."</string>
+    <string name="form_desc_product">"Un producto implica el traspaso del bien por un determinado tiempo y con ciertas condiciones. Si lo deseas, puedes establecer ciertos seguros para usar este tipo de renta."</string>
+    <string name="form_city_offer">Ciudad</string>
+    <string name="form_assurance_text">¿Requieres algún seguro por el préstamo de tu producto?</string>
+    <string name="form_email_text">Correo electrónico</string>
+    <string name="offer_title">Rento control inalámbrico para xbox 360</string>
+    <string name="offer_description">Rento control inalámbrico para xbox 360. En excelente estado. Lo rento con pilas recargables y a muy buen precio. 50$ x día. Para mas de 2 controles, te hago un descuento del 20%.</string>
 
 </resources>
