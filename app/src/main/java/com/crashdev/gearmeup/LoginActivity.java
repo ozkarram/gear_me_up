@@ -1,9 +1,6 @@
 package com.crashdev.gearmeup;
 
-
-import android.app.Fragment;
 import android.os.Bundle;
-
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -11,6 +8,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator;
 
 
 public class LoginActivity extends FragmentActivity {
@@ -26,7 +26,14 @@ public class LoginActivity extends FragmentActivity {
 
         viewPager = (ViewPager) findViewById(R.id.loginViewPager);
         viewPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        CirclePageIndicator viewPagerIndicator = (CirclePageIndicator)findViewById(R.id.viewPagerIndicator);
         viewPager.setAdapter(viewPagerAdapter);
+
+        //view pager indicator configuration
+        viewPagerIndicator.setViewPager(viewPager);
+        viewPagerIndicator.setSnap(true);
+        viewPagerIndicator.setRadius(20.0f);
+
     }
 
     @Override
