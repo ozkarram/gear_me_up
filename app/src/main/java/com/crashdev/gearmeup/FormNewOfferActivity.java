@@ -4,6 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 
 public class FormNewOfferActivity extends ActionBarActivity {
@@ -12,28 +16,33 @@ public class FormNewOfferActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_new_offer);
+        init();
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_form_new_offer, menu);
-        return true;
-    }
+    private void init() {
+        //init date picker
+        Spinner spinner = ((Spinner) findViewById(R.id.spinner_type_offer));
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.rent_type,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    findViewById(R.id.ford_desc_servicio).setVisibility(View.VISIBLE);
+                    findViewById(R.id.ford_desc_producto).setVisibility(View.GONE);
+                } else {
+                    findViewById(R.id.ford_desc_servicio).setVisibility(View.GONE);
+                    findViewById(R.id.ford_desc_producto).setVisibility(View.VISIBLE);
+                }
+            }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+            }
+        });
     }
 }
