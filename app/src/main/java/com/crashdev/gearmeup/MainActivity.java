@@ -5,7 +5,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.lang.reflect.Array;
@@ -45,5 +47,14 @@ public class MainActivity extends ActionBarActivity {
         ViewPager myPager = (ViewPager) findViewById(R.id.pager);
         myPager.setAdapter(viewPagerAdapter);
         myPager.setCurrentItem(0);
+
+        //button
+        Button button = ((Button) findViewById(R.id.button_rent));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.layout_rent_now).setVisibility(View.VISIBLE);
+            }
+        });
     }
 }

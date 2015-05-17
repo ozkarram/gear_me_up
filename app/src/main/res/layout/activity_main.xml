@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/title_text_size"
-                android:text="Title"/>
+                android:text="@string/offer_title"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Description"/>
+                    android:text="@string/offer_description"/>
 
                 <TextView
                     android:id="@+id/type_offer"
@@ -116,7 +116,14 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_rent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Réntalo ahora"/>
+
             <LinearLayout
+                android:id="@+id/layout_rent_now"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
