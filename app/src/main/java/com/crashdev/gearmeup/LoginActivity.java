@@ -1,17 +1,32 @@
 package com.crashdev.gearmeup;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Fragment;
 import android.os.Bundle;
+
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends FragmentActivity {
+
+    private static final int NUM_PAGES = 4;
+    private ViewPager viewPager;
+    private PagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        viewPager = (ViewPager) findViewById(R.id.loginViewPager);
+        viewPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
     }
 
     @Override
@@ -35,4 +50,23 @@ public class LoginActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+
+        public ScreenSlidePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public android.support.v4.app.Fragment getItem(int position) {
+
+            return new LoginScreenPageFragment();
+        }
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
+    }
+
 }
